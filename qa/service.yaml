@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: flask-demo
+  name: flask-demo-service
+spec:
+  selector:
+    app: flask-demo
+  type: LoadBalancer
+  ports:  
+  - nodePort:
+    port: 8000
+    protocol: TCP
+    targetPort: 8000
+  

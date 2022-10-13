@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flask-demo-deplyment
+  name: flask-demo-deployment
   labels:
     app: flask-demo  
 spec:
@@ -19,3 +19,5 @@ spec:
         image: docker.io/masmix/flask-demo
         ports:
         - containerPort: 8000
+        imagePullPolicy: Always
+
