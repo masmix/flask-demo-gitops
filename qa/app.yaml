@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-demo-deplyment
+  labels:
+    app: flask-demo  
+spec:
+  selector:
+    matchLabels:
+      app: flask-demo
+  replicas: 2 
+  template:
+    metadata:
+      labels:
+        app: flask-demo
+    spec:
+      containers:
+      - name: flask-demo
+        image: docker.io/masmix/flask-demo
+        ports:
+        - containerPort: 8000
