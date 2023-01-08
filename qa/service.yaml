@@ -9,7 +9,7 @@ spec:
     app: flask-demo
   type: LoadBalancer
   ports:  
-  - nodePort:
+  - nodePort: 30132
     port: 8000
     protocol: TCP
     targetPort: 8000
